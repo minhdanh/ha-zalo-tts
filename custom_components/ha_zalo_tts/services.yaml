@@ -18,6 +18,9 @@ say:
       advanced: true
       example: "Đây là nội dung mẫu"
       default: ""
+      selector:
+        text:
+          multiline: true
     speed:
       name: Speed
       description: Speed setting
