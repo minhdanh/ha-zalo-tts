@@ -4,6 +4,6 @@
 "documentation": "",
 "dependencies": [],
 "codeowners": [],
-"requirements": [],
+"requirements": ["requests"],
 "version": "0.1.0"
 }

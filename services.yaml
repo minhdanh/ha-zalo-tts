@@ -1,3 +1,0 @@
-tts_zalo:
-  api_key: 'your_api_key'
-  url: 'https://your_domain.duckdns.org' or 'http://192.168.1.100:8123'
