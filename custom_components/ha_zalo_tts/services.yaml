@@ -1,0 +1,45 @@
+say:
+  name: Say
+  description: Read a text message
+  fields:
+    entity_id:
+      name: Entity
+      description: Entity
+      required: true
+      advanced: true
+      example: media_player.home
+      default: ""
+      selector:
+        entity:
+    message:
+      name: Message
+      description: Message
+      required: true
+      advanced: true
+      example: "Đây là nội dung mẫu"
+      default: ""
+    speed:
+      name: Speed
+      description: Speed setting
+      required: true
+      advanced: true
+      example: "1"
+      default: "1"
+      selector:
+        number:
+          min: 0.8
+          max: 1.2
+    voice:
+      name: Voice
+      description: Female or male, north or south
+      required: true
+      advanced: true
+      example: "1"
+      default: "1"
+      selector:
+        select:
+          options:
+            - "1"
+            - "2"
+            - "3"
+            - "4"
