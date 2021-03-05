@@ -11,7 +11,7 @@ _LOGGER = logging.getLogger(__name__)
 def limit_message_size(message):
     zalo_character_limit = 1980
     index                = message.find(" ", zalo_character_limit)
-    message              = message[0:index].strip()
+    message              = message[0:index + 1].strip()
     return message
 
 def zalo_tts(api_key, speed, voice, message, audio_path):
