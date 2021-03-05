@@ -1,7 +1,7 @@
 import requests, json, os, time
 import logging
 
-SERVICE_NAME = 'tts_zalo'
+SERVICE_NAME = 'ha_tts_zalo'
 
 audio_filename = 'tts_zalo.mp3'
 

@@ -1,5 +1,5 @@
 {
-"domain": "ha-zalo-tts",
+"domain": "ha_zalo_tts",
 "name": "Home Automation text to speech service using Zalo AI",
 "documentation": "",
 "dependencies": [],
