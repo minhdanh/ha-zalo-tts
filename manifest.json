@@ -1,0 +1,9 @@
+{
+"domain": "ha-zalo-tts",
+"name": "Home Automation text to speech service using Zalo AI",
+"documentation": "",
+"dependencies": [],
+"codeowners": [],
+"requirements": [],
+"version": "0.1.0"
+}
