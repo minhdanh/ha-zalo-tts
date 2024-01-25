@@ -1,4 +1,4 @@
-import requests, json, os, time
+import requests, json, os, time, re
 import logging
 
 SERVICE_NAME = 'ha_zalo_tts'
@@ -10,6 +10,8 @@ _LOGGER = logging.getLogger(__name__)
 
 def limit_message_size(message):
     zalo_character_limit = 1980
+    message = re.sub(r'\s+', ' ', message)
+    message = message.replace('\n', ' ')
     index                = message.find(" ", zalo_character_limit)
     if index != -1:
         message = message[0:index].strip()
