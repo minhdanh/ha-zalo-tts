@@ -24,7 +24,7 @@ def zalo_tts(api_key, speed, voice, message, audio_path):
     data_payload   = {'input': limit_message_size(message), 'speed': str(speed), 'encode_type': '1','speaker_id': str(voice)}
 
     response = requests.post(api_url, data = data_payload, headers = api_key_header).json()
-    if 'data' in response and 'url' in response['data']
+    if 'data' in response and 'url' in response['data']:
         return True, response['data']['url']
     return False, ""
 
