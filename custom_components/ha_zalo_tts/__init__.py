@@ -18,7 +18,7 @@ def limit_message_size(message):
     # else: index == -1 and lenght > 1980 ?
     return message
 
-def zalo_tts(api_key, speed, voice, message, audio_path):
+def zalo_tts(api_key, speed, voice, message):
     api_url        = 'https://api.zalo.ai/v1/tts/synthesize'
     api_key_header = {'apikey': str(api_key)}
     data_payload   = {'input': limit_message_size(message), 'speed': str(speed), 'encode_type': '1','speaker_id': str(voice)}
@@ -35,7 +35,7 @@ def setup(hass, config):
         speed              = data_call.data.get("speed")
         entity_id          = data_call.data.get("entity_id")
         message            = data_call.data.get("message")
-        success, audio_url = zalo_tts(api_key, speed, voice, message, audio_path)
+        success, audio_url = zalo_tts(api_key, speed, voice, message)
 
         if success == False:
             _LOGGER.error("The request timed out or something went wrong!")
